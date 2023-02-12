@@ -1,6 +1,9 @@
 # Embedded-System-Smart-Flowerpot
 Smart Flowerpot | Temperature &amp; Humidity Detection | Automatic Watering | App Remote Control | Automatic Base Rotation based on Sunlight Direction
 
+### Video Demo Link:
+https://youtu.be/QPt85aBEJjQ
+
 ## System Structure:
 
 ![alt text](https://github.com/Xintong-Zhan/Embedded-System-Smart-Flowerpot/blob/main/project_website/images/system.png)
