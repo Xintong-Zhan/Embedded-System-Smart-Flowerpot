@@ -4,4 +4,4 @@ Smart Flowerpot | Temperature &amp; Humidity Detection | Automatic Watering | Ap
 System Structure:
 
 
-![alt text](https://github.com/Xintong-Zhan/Embedded-System-Smart-Flowerpot/tree/main/project_website/images/system.png)
+![alt text](https://github.com/Xintong-Zhan/Embedded-System-Smart-Flowerpot/blob/main/project_website/images/system.png)
