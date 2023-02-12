@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Columbia University EECS E4764 IoT Project Report #0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<!-- <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span> -->
+							<h1 id="title">Smart Flowerpot</h1>
+							<p>Columbia University <br>
+								EECS E4764 Fall'22 Internet of Things<br>
+								Intelligent and Connected Systems<br>
+								Team 18 Project Report
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Abstract</span></a></li>
+								<li><a href="#motivation" id="motivation-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Motivation</span></a></li>
+								<li><a href="#system" id="system-link" class="skel-layers-ignoreHref"><span class="icon fa-th">System</span></a></li>
+								<li><a href="#results" id="results-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Results</span></a></li>
+								<li><a href="#references" id="references-link" class="skel-layers-ignoreHref"><span class="icon fa-th">References</span></a></li>
+								<li><a href="#team" id="team-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Our Team</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+								<h2 class="alt">Smart Flowerpot</h2>
+								<p>Xintong Zhan, Lifan Zeng, Qingyang Gu</p>
+								<p>This design is the final project for EECS4764:  IOT - INTELLIG & CONNECTED SYS course (fall 2022) at Columbia University. We designed a smart flowerpot that uses intelligent and connected systems. The flowerpot monitors the condition of the plant inside with various sensors and automatically takes care of the plant. It allows the user to interact with the flowerpot using an Android app we designed. </p>
+
+
+							<footer>
+								<a href="#motivation" class="button scrolly">Motivation</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="motivation" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Motivation</h2>
+							</header>
+
+							<p align="left">The goal of this project is to allow people who are too busy to take care of their plants or people who are not especially good at gardening to still have the chance to enjoy having plants in their homes with the help of an intelligent system. The product takes better care of the plant by constantly monitoring its condition, providing care, and notifying the user of undesired conditions. </p>
+							<p align="left">The functions of the smart flowerpot include:</p>
+							<ul style="list-style-type:square">
+								<li align="left">Displaying the humidity, temperature, and lighting information on a screen on the flowerpot</li>
+								<li align="left">Automatically watering the plant when humidity is too low.</li>
+								<li align="left">Automatically rotating the plant when one side of the plant is constantly receiving more light than the other.</li>
+								<li align="left">Alerting the user of undesired conditions for the plant by producing a buzzing sound.</li>
+								<li align="left">Allowing the user to remotely command the watering and rotation functions, or simply check the condition of the plant from an app by speaking to the app (speech recognition).</li>
+							</ul>
+
+						</div>
+					</section>
+
+
+					<section id="system" class="three">
+						<div class="container">
+
+							<header>
+								<h2>System</h2>
+							</header>
+
+							<p align="left">
+								The main components of the system include the smart flowerpot hardware and a cloud control system. We chose Raspberry Pi as the hardware platform to monitor the plant with different sensors and to interact with the plant with various actuators, whereas the cloud control system analyzes the information received from the hardware with an algorithm, allowing the user to remotely control the product. The two main components communicate via Socket.
+							</p>
+
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/system.png" alt="" /></a>
+								<header>
+									<h3>System block diagram</h3>
+								</header>
+							</article>
+
+							<h3 align="left">Hardware</h3>
+							<p align="left"> </p>
+							<p align="left">
+								The sensors in the hardware component include a DHT11 temperature humidity sensor and two TCS34725 light sensors. These sensors constantly monitor the temperature and humidity inside the pot and the light received by two opposite sides of the flowerpot and send the measured data to the cloud control platform.
+							</p>
+							<p align="left">
+								Three different actuators are used in this project: an LCD screen, a buzzer, a motor, and a water pump.
+							</p>
+							<ul style="list-style-type:square">
+								<li align="left">LCD screen: displays measurements.</li>
+								<li align="left">Buzzer: alerts the user when the plant is under undesirable conditions.</li>
+								<li align="left">Motor: rotates the plant to receive light evenly.</li>
+								<li align="left">Water pump: pumps water from a container to water the plant.</li>
+							</ul>
+							</p>
+							<p align="left">
+								The circuit connection between the Raspberry Pi and all the sensors and actuators is shown in the picture below.
+							</p>
+
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/hardware.png" alt="" /></a>
+								<header>
+									<h3>Hardware connection</h3>
+								</header>
+							</article>
+
+							<h3 align="left">Software</h3>
+							<p align="left"> </p>
+							<p align="left">
+								The software component consists of a server and an app. We implemented multithreading to create a sub-thread dedicated to socket communication with the app so that it will not congest the main control module. With multithreading, we allow the server to simultaneously receive data from sensors, send commands to actuators, and receive commands from the remote app.
+							</p>
+							<p align="left">
+								It includes the following control logic of the entire system:
+							</p>
+							<ul style="list-style-type:square">
+								<li align="left">LCD screen displays the text “smart flowerpot” unless other commands are received.</li>
+								<li align="left">
+									When the temperature received from the temperature (°C) sensor exceeds 29, the buzzer is instantly enabled. The LCD screen displays the text “too hot!”.[1]
+								</li>
+								<li align="left">
+									When humidity is below 20%, the water pump is instantly enabled.
+								</li>
+								<li align="left">
+									When the difference in measurements from the two light sensors[2] exceeds 200, the motor is instantly enabled (rotates the pot by 180°). Every other time the motor is triggered, it changes direction, so that the wires in the flowerpot do not get tangled.
+								</li>
+								<li align="left">When the server receives the string “rotate flower” from the app, the motor is instantly enabled. It functions in the same way as described in the previous bullet.</li>
+								<li align="left">
+									When the server receives the string “water flower” from the app, the water pump is instantly enabled.
+								</li>
+								<li align="left">
+									When the server receives the string “show temperature” from the app, the LCD screen displays the current temperature measured by the temperature humidity sensor.
+								</li>
+								<li align="left">
+									When the server receives the string “show humidity” from the app, the LCD screen displays the current humidity measured by the temperature humidity sensor.
+								</li>
+							</ul>
+							<p align="left">
+								We use Ngrok to perform intranet penetration and provide a public server IP for the server. The app would interact with the server by this public IP. The app uses speech recognition technology[3] to translate the spoken commands from the user to a string and sends the string to the server.
+							</p>
+
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/software.png" alt="" /></a>
+								<header>
+									<h3>Voice recognition APP</h3>
+								</header>
+							</article>
+
+							<h3 align="left">Form Factor</h3>
+							<p align="left"> </p>
+							<p align="left">Using Solidworks, we drew and 3D printed three separate parts of the form factor: the shell, the platform, and the pot.</p>
+							<ul style="list-style-type:square">
+								<li align="left">Shell: container of the entire product.</li>
+								<li align="left">Pot: contains the plant and can be rotated by the motor.</li>
+								<li align="left">
+									Platform: serves as a base for the pot and separates the space in the shell into two: the lower space containing the Rasberry Pi, and the upper space containing all sensors, actuators, and the pot.
+								</li>
+							</ul>
+
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/formfactor.png" alt="" /></a>
+								<header>
+									<h3>Form factor 3D models</h3>
+								</header>
+							</article>
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/assembly.png" alt="" /></a>
+								<header>
+									<h3>Solidworks assembly</h3>
+								</header>
+							</article>
+
+
+						</div>
+					</section>
+
+
+					<section id="results" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Results Demonstration</h2>
+							</header>
+							
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/QPt85aBEJjQ" frameborder="0" allowfullscreen></iframe>
+
+
+						</div>
+					</section>
+
+					<section id="references" class="three">
+						<div class="container">
+
+							<header>
+								<h2>References</h2>
+							</header>
+							<p align="left"> </p>
+							<p align="left">[1] https://www.freva.com/dht11-temperature-and-humidity-sensor-on-raspberry-pi/</p>
+							<p align="left">[2] https://github.com/yatelandisizi/TCS34725/blob/master/Adafruit_I2C.py</p>
+							<p align="left">[3] https://www.youtube.com/watch?v=pjK36SmQ_9A</p>
+							<p align="left">[4] https://roboticsbackend.com/raspberry-pi-3-pins/</p>
+							<p align="left">[5] https://docs.micropython.org/en/latest/esp8266/tutorial/ssd1306.html</p>
+							<p align="left">[6] https://stackoverflow.com/questions/55009794/connecting-to-a-wifi-network-using-python</p>
+							<p align="left">[7] https://dashboard.ngrok.com/get-started/setup</p>
+
+						</div>
+					</section>
+
+
+				<!-- About Me -->
+					<section id="team" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Our Team</h2>
+							</header>
+
+							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
+
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+										<header>
+											<h3>Xintong Zhan</h3>
+											<p>Columbia University MSEE Class of 2023     https://github.com/Xintong-Zhan  https://www.linkedin.com/in/xintong-zhan-060035250/</p>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+										<header>
+											<h3>Lifan Zeng</h3>
+											<p>Columbia University MSEE Class of 2023     https://www.linkedin.com/in/lifan-zeng-a34658197/</p>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+										<header>
+											<h3>Qingyang Gu</h3>
+											<p>Columbia University MSEE Class of 2023     https://www.linkedin.com/in/qingyang-gu/</p>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p align="left">
+								<strong>Xintong Zhan: </strong>xz3165@columbia.edu</br>
+								<strong>Lifan Zeng: </strong>lz2860@columbia.edu</br>
+								<strong>Qingyang Gu: </strong>qg2208@columbia.edu</br>
+								</br>
+								<strong>Columbia University </strong><a href="http://www.ee.columbia.edu">Department of Electrical Engineering</a><br>
+								<!-- <strong>Class Website:</strong>
+	<a href="https://edblogs.columbia.edu/eecs4764-001-2019-3/">Columbia University EECS E4764 Fall '22 IoT</a></br> -->
+								<strong>Instructor:</strong> <a href="http://fredjiang.com/">Professsor Xiaofan (Fred) Jiang</a>
+							</p>
+
+
+							<!-- <form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form> -->
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; IoT Project | All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
